@@ -153,12 +153,6 @@ export function ReelItem({
         liked={liked}
         onTogglePlay={handleTap}
         onLike={onLike}
-        onShare={() => {
-          const url = `${window.location.origin}/#reel-${item.id}`
-          if (navigator.clipboard?.writeText) {
-            navigator.clipboard.writeText(url).catch(() => {})
-          }
-        }}
         onSave={() => {
           const link = document.createElement('a')
           link.href = `/assets/${item.filename}`

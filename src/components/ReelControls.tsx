@@ -8,7 +8,6 @@ interface ReelControlsProps {
   liked: boolean
   onTogglePlay: () => void
   onLike: () => void
-  onShare: () => void
   onSave: () => void
 }
 
@@ -20,7 +19,6 @@ export function ReelControls({
   liked,
   onTogglePlay,
   onLike,
-  onShare,
   onSave,
 }: ReelControlsProps) {
   return (
