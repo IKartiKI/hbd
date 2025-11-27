@@ -12,14 +12,6 @@
     "show_subtitle": true
   },
   {
-    "id": "9",
-    "type": "video",
-    "filename": "media/no-context.mov",
-    "caption": "ran out of content😓",
-    "roast_line": "No-Context",
-    "show_subtitle": true
-  },
-  {
     "id": "2",
     "type": "photo",
     "filename": "media/aankhon.jpg",
@@ -83,6 +75,14 @@
     "audio_filename": "media/one-love.mp3",
     "audio_start_sec": 49,
     "audio_end_sec": 73,
+    "show_subtitle": true
+  },
+  {
+    "id": "9",
+    "type": "video",
+    "filename": "media/no-context.mov",
+    "caption": "ran out of content😓",
+    "roast_line": "No-Context",
     "show_subtitle": true
   },
   {
