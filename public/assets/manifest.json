@@ -3,7 +3,7 @@
     "id": "1",
     "type": "photo",
     "filename": "media/aal_izz_well.png",
-    "caption": "POV: She says \"aal izz well\" after causing maximum drama.",
+    "caption": "kya hi majboori rhi hogi",
     "roast_line": "aal izz well -aah type shi",
     "audio_filename": "media/ringtone.mp3",
     "audio_start_sec": 185,
@@ -12,15 +12,15 @@
     "show_subtitle": true
   },
   {
-    "id": "2",
+    "id": "9",
     "type": "video",
     "filename": "media/no-context.mov",
-    "caption": "No context needed, just vibes",
-    "roast_line": "Certified chaos in motion",
+    "caption": "ran out of content😓",
+    "roast_line": "No-Context",
     "show_subtitle": true
   },
   {
-    "id": "3",
+    "id": "2",
     "type": "photo",
     "filename": "media/aankhon.jpg",
     "caption": "When the eyes say everything",
@@ -31,55 +31,55 @@
     "show_subtitle": true
   },
   {
-    "id": "4",
+    "id": "3",
     "type": "video",
     "filename": "media/naam-tera.mp4",
-    "caption": "When the vibes hit just right",
-    "roast_line": "Main character moment",
+    "caption": "self-applaud👏",
+    "roast_line": "one going w the trend",
     "video_start_sec": 13,
+    "show_subtitle": true
+  },
+  {
+    "id": "4",
+    "type": "video",
+    "filename": "media/lassi.mp4",
+    "caption": "ninnu temm🔔😴",
+    "roast_line": "Classic",
     "show_subtitle": true
   },
   {
     "id": "5",
     "type": "video",
-    "filename": "media/lassi.mp4",
-    "caption": "Just vibes",
-    "roast_line": "Certified legend",
+    "filename": "media/hawa.mp4",
+    "caption": "rehu is my soul twin",
+    "roast_line": "Main character moment",
     "show_subtitle": true
   },
   {
     "id": "6",
     "type": "video",
-    "filename": "media/hawa.mp4",
-    "caption": "Pure vibes",
-    "roast_line": "Iconic moment",
-    "show_subtitle": true
-  },
-  {
-    "id": "7",
-    "type": "video",
     "filename": "media/not-all.mp4",
-    "caption": "When the vibes are unmatched",
-    "roast_line": "Certified moment",
+    "caption": "only time this girl has ever cleaned up for herself",
+    "roast_line": "rare aesthetics",
     "audio_filename": "media/not-all-audio.mp3",
     "audio_start_sec": 3,
     "audio_end_sec": 13,
     "show_subtitle": true
   },
   {
-    "id": "8",
+    "id": "7",
     "type": "video",
     "filename": "media/aha.mp4",
-    "caption": "Just pure energy",
-    "roast_line": "Absolute vibes",
+    "caption": "👀",
+    "roast_line": "aaheenn😫😫",
     "show_subtitle": true
   },
   {
-    "id": "9",
+    "id": "8",
     "type": "photo",
     "filename": "media/one-love.png",
-    "caption": "When the vibes are unmatcheddd",
-    "roast_line": "Certified moment",
+    "caption": "😚😚😚🎂🎂🎂",
+    "roast_line": "happieieeie birthdayyyayaa",
     "audio_filename": "media/one-love.mp3",
     "audio_start_sec": 49,
     "audio_end_sec": 73,
@@ -89,8 +89,8 @@
     "id": "10",
     "type": "photo",
     "filename": "media/thankyou.jpeg",
-    "caption": "When the vibes are unmatcheddd",
-    "roast_line": "Certified moment",
+    "caption": "i'll see you next year",
+    "roast_line": "Thankyou for watching🙏",
     "audio_filename": "media/thankyou.mp3",
     "audio_start_sec": 0,
     "show_subtitle": true
