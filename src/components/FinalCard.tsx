@@ -8,8 +8,8 @@ interface FinalCardProps {
 
 export function FinalCard({ herName, onReplay }: FinalCardProps) {
   const [showModal, setShowModal] = useState(false)
-  const loveLine = `Thank you for being the most chaotic, radiant part of my universe.`
-  const loveLine2 = `The roast is fake mean. The love is aggressively real.`
+  const loveLine = `Thank you for having a birthday, otherwise I’d never have wasted hours making this side project because of you.`
+  const loveLine2 = `Pdhai krle chl kl paper h🥱.`
 
   const typed1 = useTypedText({ text: loveLine })
   const typed2 = useTypedText({ text: loveLine2, startDelayMs: 2600 })
