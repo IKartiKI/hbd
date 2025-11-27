@@ -158,7 +158,7 @@ export function ReelItem({
         {showTapLike && (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <div className="animate-like-burst text-6xl drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]">
-              ❤️
+              💩
             </div>
           </div>
         )}
