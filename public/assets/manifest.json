@@ -9,7 +9,19 @@
     "audio_start_sec": 185,
     "audio_end_sec": 205,
     "sticker": "🍑🍑",
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "aesthetic_riya", "text": "Omg this vibe 🔥", "timestamp": 1701115200000 },
+    { "username": "prettychaos", "text": "Why are you like this 😭😭", "timestamp": 1701115600000 },
+    { "username": "mirrorgirl", "text": "Slaying without effort omg 💅", "timestamp": 1701115900000 },
+    { "username": "lostinfilters", "text": "Camera is scared of you fr 😭", "timestamp": 1701116200000 },
+    { "username": "softly_savage", "text": "Main character behaviour ✨", "timestamp": 1701116600000 },
+    { "username": "vibegoddess", "text": "Pretty for WHAT 😩", "timestamp": 1701116900000 },
+    { "username": "thatgirldiaries", "text": "Not me smiling like an idiot lmao", "timestamp": 1701117100000 },
+    { "username": "sunkissed_megha", "text": "Why’s this so cute?? 😭", "timestamp": 1701117400000 },
+    { "username": "clumsy_cutie", "text": "Stop being adorable pls 😭", "timestamp": 1701117800000 },
+    { "username": "chaotic_soul", "text": "Literal serotonin boost 💖", "timestamp": 1701118000000 }
+  ]
   },
   {
     "id": "2",
@@ -19,7 +31,19 @@
     "roast_line": "Main character energy",
     "audio_filename": "media/aankhon.mp3",
     "audio_start_sec": 0,
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "glossygirl", "text": "Ma’am this is ILLEGAL levels of cute 😭", "timestamp": 1701215200000 },
+    { "username": "dramaqueen_24", "text": "You woke up and chose pretty 💅", "timestamp": 1701215500000 },
+    { "username": "filterfairy", "text": "HELLOOOO??? The look??? 🔥", "timestamp": 1701215800000 },
+    { "username": "softiewithattitude", "text": "Why do you look expensive 😭", "timestamp": 1701216000000 },
+    { "username": "moodybrowngirl", "text": "Teach me how to be this cute omg", "timestamp": 1701216300000 },
+    { "username": "chaoticpinky", "text": "Girl stop it I’m blushing 😭", "timestamp": 1701216600000 },
+    { "username": "pinkmango", "text": "This reel is fighting for its life 😂", "timestamp": 1701216900000 },
+    { "username": "slayykriti", "text": "Pretty personality unlocked ✨", "timestamp": 1701217300000 },
+    { "username": "vibesnroses", "text": "Someone call Vogue rn 📞", "timestamp": 1701217600000 },
+    { "username": "sunflower.mafia", "text": "The aesthetic jumped OUT 🤌", "timestamp": 1701217900000 }
+  ]
   },
   {
     "id": "3",
@@ -28,7 +52,19 @@
     "caption": "self-applaud👏",
     "roast_line": "one going w the trend",
     "video_start_sec": 13,
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "messyhairclub", "text": "This energy?? unmatched 😭🔥", "timestamp": 1701315200000 },
+    { "username": "cryingandcute", "text": "You look like trouble in HD 😂", "timestamp": 1701315500000 },
+    { "username": "delulugirl", "text": "The drama I sense here omg 💀", "timestamp": 1701315700000 },
+    { "username": "foreverconfused", "text": "This is so you it hurts 😭", "timestamp": 1701316100000 },
+    { "username": "peachymess", "text": "Girl WHAT are you doing 😂", "timestamp": 1701316500000 },
+    { "username": "minty.teaa", "text": "Peak entertainment tbh 😂", "timestamp": 1701316900000 },
+    { "username": "smallchaosunit", "text": "I cannot stop laughing 😭🔥", "timestamp": 1701317200000 },
+    { "username": "bubblewrapped", "text": "Certified cute menace 💅", "timestamp": 1701317500000 },
+    { "username": "overthinkingclub", "text": "This reel deserves an award 😂", "timestamp": 1701317800000 },
+    { "username": "mildlytoxic", "text": "Dramatic but adorable 💀", "timestamp": 1701318000000 }
+  ]
   },
   {
     "id": "4",
@@ -36,7 +72,19 @@
     "filename": "media/lassi.mp4",
     "caption": "ninnu temm🔔😴",
     "roast_line": "Classic",
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "glitterchaos", "text": "This should be in a museum 😂", "timestamp": 1701415200000 },
+    { "username": "fenergies", "text": "Madam what is this behaviour 😭", "timestamp": 1701415500000 },
+    { "username": "prettyproblem", "text": "Why do you look like u cause drama 😂", "timestamp": 1701415800000 },
+    { "username": "girlwhocries", "text": "The expression 😭😭😭", "timestamp": 1701416000000 },
+    { "username": "randomsneezes", "text": "I can’t breathe bruh 💀🔥", "timestamp": 1701416300000 },
+    { "username": "aestheticmess", "text": "Too cute for ur own good 😭", "timestamp": 1701416600000 },
+    { "username": "berryblastt", "text": "Definition of chaos queen 🤝", "timestamp": 1701416900000 },
+    { "username": "pinksyndrome", "text": "This reel is elite 😂", "timestamp": 1701417200000 },
+    { "username": "pillowfightclub", "text": "Main character again 🙄", "timestamp": 1701417500000 },
+    { "username": "weeklychaos", "text": "Bro this is GOLD 💀🔥", "timestamp": 1701418000000 }
+  ]
   },
   {
     "id": "5",
@@ -44,7 +92,19 @@
     "filename": "media/hawa.mp4",
     "caption": "rehu is my soul twin",
     "roast_line": "Main character moment",
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "glossywitch", "text": "You chose violence with this 😭🔥", "timestamp": 1701515200000 },
+    { "username": "prettyparadox", "text": "No bc this is TOO GOOD 💅", "timestamp": 1701515500000 },
+    { "username": "sassypastel", "text": "Why so cute bro 😭", "timestamp": 1701515800000 },
+    { "username": "lemonchill", "text": "Powerful behaviour only 🔥", "timestamp": 1701516000000 },
+    { "username": "pearlpanic", "text": "Girl STOP being adorable 😭", "timestamp": 1701516300000 },
+    { "username": "tinytempest", "text": "Flexing again I see 👀", "timestamp": 1701516600000 },
+    { "username": "cottoncandysatan", "text": "Face card NEVER declines 💅", "timestamp": 1701516900000 },
+    { "username": "blushcloud", "text": "You’re unreal istg 😭", "timestamp": 1701517200000 },
+    { "username": "chaosnchai", "text": "This reel cured my headache lol", "timestamp": 1701517500000 },
+    { "username": "snarkygirl", "text": "She’s at it AGAIN 💀", "timestamp": 1701517800000 }
+  ]
   },
   {
     "id": "6",
@@ -55,7 +115,19 @@
     "audio_filename": "media/not-all-audio.mp3",
     "audio_start_sec": 3,
     "audio_end_sec": 13,
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "gigglymess", "text": "Ur energy??? chaotic good 😂", "timestamp": 1701615200000 },
+    { "username": "confusedqueeen", "text": "Why are you so unserious 😭", "timestamp": 1701615500000 },
+    { "username": "browniegirl", "text": "This MADE my day fr 😂", "timestamp": 1701615800000 },
+    { "username": "mintymocha", "text": "Peak meme material 💀", "timestamp": 1701616000000 },
+    { "username": "bubblebabe", "text": "You’re literally a cartoon 😭", "timestamp": 1701616300000 },
+    { "username": "chaoticbindi", "text": "Please do more of this 😂", "timestamp": 1701616600000 },
+    { "username": "pinkstorm", "text": "She never disappoints 💅", "timestamp": 1701616900000 },
+    { "username": "softiekriti", "text": "I’m screamingg 😭🔥", "timestamp": 1701617200000 },
+    { "username": "lunarchaos", "text": "Miss ma’am wth 😂", "timestamp": 1701617500000 },
+    { "username": "tinyriot", "text": "Elite content once again 💀", "timestamp": 1701617800000 }
+  ]
   },
   {
     "id": "7",
@@ -63,7 +135,19 @@
     "filename": "media/aha.mp4",
     "caption": "👀",
     "roast_line": "aaheenn😫😫",
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "wannabesane", "text": "THE VIBES 🔥", "timestamp": 1701715200000 },
+    { "username": "pretendgrownup", "text": "I’m choking on air 😭", "timestamp": 1701715500000 },
+    { "username": "chaosmango", "text": "Who gave you this power??", "timestamp": 1701715800000 },
+    { "username": "pocketprincess", "text": "Ma’am pls slow down 😭", "timestamp": 1701716000000 },
+    { "username": "vibeoverdose", "text": "Not her being iconic again 💅", "timestamp": 1701716300000 },
+    { "username": "pastelpain", "text": "I'm obsessed help 💀", "timestamp": 1701716600000 },
+    { "username": "peachchaos", "text": "U ARE TOO MUCH 😭", "timestamp": 1701716900000 },
+    { "username": "frootloopzz", "text": "Peak delulu energy 😂", "timestamp": 1701717200000 },
+    { "username": "pinkstatic", "text": "This reel deserves awards 🔥", "timestamp": 1701717500000 },
+    { "username": "softstorm", "text": "Main character ALWAYS 🙄", "timestamp": 1701717800000 }
+  ]
   },
   {
     "id": "8",
@@ -74,7 +158,19 @@
     "audio_filename": "media/one-love.mp3",
     "audio_start_sec": 49,
     "audio_end_sec": 73,
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "snacksizequeen", "text": "The ATTITUDE omg 💅", "timestamp": 1701815200000 },
+    { "username": "lunarsass", "text": "She’s about to start a fight 😂", "timestamp": 1701815500000 },
+    { "username": "glitterrage", "text": "Pretty + scary = vibe 🔥", "timestamp": 1701815800000 },
+    { "username": "dramahologram", "text": "I fear you sometimes 💀", "timestamp": 1701816000000 },
+    { "username": "prettyhavoc", "text": "Face card overpowered 😭", "timestamp": 1701816300000 },
+    { "username": "bubbleburn", "text": "The SASS jumped out 🤌", "timestamp": 1701816600000 },
+    { "username": "meltdownqueen", "text": "Scary but cute lol", "timestamp": 1701816900000 },
+    { "username": "softbuttoxic", "text": "Why u look so dangerous 😂", "timestamp": 1701817200000 },
+    { "username": "catastrophecutie", "text": "Certified menace vibes 💀", "timestamp": 1701817500000 },
+    { "username": "neonnonsense", "text": "I rate this 100/10 🔥", "timestamp": 1701817800000 }
+  ]
   },
   {
     "id": "9",
@@ -82,7 +178,19 @@
     "filename": "media/no-context.mov",
     "caption": "ran out of content😓",
     "roast_line": "No-Context",
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "midnightchai", "text": "HELLOOO?? The beauty??? 🔥", "timestamp": 1701915200000 },
+    { "username": "confettigirl", "text": "This is TOO MUCH 😭", "timestamp": 1701915500000 },
+    { "username": "paintedchaos", "text": "Girl you ATE 😩", "timestamp": 1701915800000 },
+    { "username": "filterfantasy", "text": "Very main character of you 💅", "timestamp": 1701916000000 },
+    { "username": "sunsetbrainless", "text": "Ok but why so pretty 😭", "timestamp": 1701916300000 },
+    { "username": "bubbleheart", "text": "This reel is illegal omg 😂", "timestamp": 1701916600000 },
+    { "username": "pinkhavoc", "text": "Face card never declines 🔥", "timestamp": 1701916900000 },
+    { "username": "pocketchaos", "text": "The aesthetic is CRAZYY", "timestamp": 1701917200000 },
+    { "username": "pastelsyndrome", "text": "I need more of these pls 😭", "timestamp": 1701917500000 },
+    { "username": "tiredfairy", "text": "What kind of perfection is this 💀", "timestamp": 1701917800000 }
+  ]
   },
   {
     "id": "10",
@@ -92,7 +200,19 @@
     "roast_line": "Thankyou for watching🙏",
     "audio_filename": "media/thankyou.mp3",
     "audio_start_sec": 0,
-    "show_subtitle": true
+    "show_subtitle": true,
+    "fillerComments": [
+    { "username": "its_me_anya", "text": "Why is he so smart AND fine?? 😭🔥", "timestamp": 1702115200000 },
+    { "username": "crush_alert_xd", "text": "Sir please stop looking this good 😩", "timestamp": 1702115500000 },
+    { "username": "studywithme_girl", "text": "Brains + looks?? Unfair combo tbh 😭", "timestamp": 1702115800000 },
+    { "username": "fangirlmode_on", "text": "HELLOOO who allowed him to exist like this 😳", "timestamp": 1702116100000 },
+    { "username": "notesonfleek", "text": "Smart boys shouldn’t be this cute omg 😭", "timestamp": 1702116400000 },
+    { "username": "txtmyheart", "text": "His IQ is high but so is my heart rate rn 😩😂", "timestamp": 1702116700000 },
+    { "username": "prettynerdette", "text": "He looks like he solves equations AND hearts 💀❤️", "timestamp": 1702117000000 },
+    { "username": "chaoticromantic", "text": "Girl math says I deserve him 🙄✨", "timestamp": 1702117300000 },
+    { "username": "brainyfangirl", "text": "His face card + brain card both valid 😭🔥", "timestamp": 1702117600000 },
+    { "username": "pinkbutpetty", "text": "Not me simping over a smart boy again 😭💀", "timestamp": 1702117900000 }
+  ]
   }
 ]
 

@@ -97,8 +97,18 @@ export function ReelItem({
   return (
     <section
       aria-label={`Roast reel ${index + 1}`}
-      className="relative h-full w-full overflow-hidden rounded-none bg-black text-white"
+      className="relative h-full w-full overflow-hidden bg-black text-white"
     >
+      {/* Progress bar at the top */}
+      <div className="absolute top-0 left-0 right-0 z-20 flex h-1 space-x-1 px-2 pt-2">
+        <div className="h-full w-full bg-white/30 rounded-full overflow-hidden">
+          <div 
+            className="h-full bg-white transition-all duration-300 ease-out" 
+            style={{ width: `${progress * 100}%` }}
+          />
+        </div>
+      </div>
+
       <div
         className="absolute inset-0"
         onClick={handleTap}
@@ -113,9 +123,8 @@ export function ReelItem({
               src={`/assets/${item.filename}`}
               alt={item.caption}
               loading={isActive ? 'eager' : 'lazy'}
-              className="h-full w-full object-cover animate-ken-burns-slow"
+              className="h-full w-full object-cover"
             />
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
           </div>
         ) : (
           <div className="relative h-full w-full">
@@ -128,22 +137,34 @@ export function ReelItem({
               playsInline
               preload={isActive ? 'auto' : 'metadata'}
             />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
           </div>
         )}
 
-        <RoastOverlay item={item} />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        
+        {/* Content Overlay */}
+        <div className="absolute inset-0 flex flex-col justify-between p-4">
+          <div className="h-8"></div> {/* Spacer for progress bar */}
+          
+          <div className="flex-1 flex items-end">
+            <div className="w-full">
+              <RoastOverlay item={item} />
+            </div>
+          </div>
+        </div>
 
+        {/* Like Animation */}
         {showTapLike && (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <div className="animate-like-burst text-6xl drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]">
-              💩
+              ❤️
             </div>
           </div>
         )}
       </div>
 
-      <ReelControls
+<ReelControls
         item={item}
         isActive={isActive}
         isPlaying={isPlaying}
@@ -160,8 +181,6 @@ export function ReelItem({
           document.body.removeChild(link)
         }}
       />
-
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 via-black/10 to-transparent" />
     </section>
   )
 }
