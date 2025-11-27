@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import manifest from '../../public/assets/manifest.json?url';
-import type { MediaItem } from '../types';
 
 interface Comment {
   id: string;
