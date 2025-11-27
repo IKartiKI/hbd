@@ -13,7 +13,6 @@ type ToastState = { id: number; message: string } | null
 
 export function ReelFeed({ items, herName }: ReelFeedProps) {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [roastMode, setRoastMode] = useState(true)
   // Start paused so the first user tap counts as an intentional gesture for audio autoplay policies
   const [isPlaying, setIsPlaying] = useState(false)
   const [toast, setToast] = useState<ToastState>(null)
@@ -77,7 +76,7 @@ export function ReelFeed({ items, herName }: ReelFeedProps) {
 
   const showRoastToast = () => {
     const id = ++toastIdRef.current
-    setToast({ id, message: 'Roasted!' })
+    setToast({ id, message: 'burdayyy' })
     window.setTimeout(() => {
       setToast((current) => (current?.id === id ? null : current))
     }, 900)
@@ -113,27 +112,6 @@ export function ReelFeed({ items, herName }: ReelFeedProps) {
                 {timestamp}
               </span>
             </div>
-
-            <button
-              type="button"
-              aria-pressed={roastMode}
-              aria-label="Toggle Roast Mode"
-              onClick={() => setRoastMode((prev) => !prev)}
-              className="pointer-events-auto inline-flex items-center gap-1.5 rounded-full bg-black/65 px-3 py-1 border border-white/10 text-[11px] font-semibold tracking-wide"
-            >
-              <span
-                className={`inline-flex h-4 w-7 items-center rounded-full px-0.5 transition-colors ${
-                  roastMode ? 'bg-neonPink/90' : 'bg-slate-600/80'
-                }`}
-              >
-                <span
-                  className={`h-3 w-3 rounded-full bg-black shadow-sm transition-transform ${
-                    roastMode ? 'translate-x-3' : 'translate-x-0'
-                  }`}
-                />
-              </span>
-              <span>{roastMode ? 'Roast Mode: ON' : 'Roast Mode: OFF'}</span>
-            </button>
           </header>
 
           <div
@@ -149,25 +127,27 @@ export function ReelFeed({ items, herName }: ReelFeedProps) {
                   aria-hidden={activeIndex !== index}
                 >
                   <ReelItem
+                    key={item.id}
                     item={item}
                     isActive={activeIndex === index}
-                    roastMode={roastMode}
                     index={index}
                     onRequestTogglePlay={() => setIsPlaying((prev) => !prev)}
                     onDoubleRoast={showRoastToast}
                     liked={likedIds.has(item.id)}
                     onLike={() =>
                       setLikedIds((prev) => {
-                        const next = new Set(prev)
-                        if (next.has(item.id)) next.delete(item.id)
-                        else next.add(item.id)
-                        return next
+                        const newSet = new Set(prev)
+                        if (newSet.has(item.id)) {
+                          newSet.delete(item.id)
+                        } else {
+                          newSet.add(item.id)
+                        }
+                        return newSet
                       })
                     }
                   />
                 </div>
               ))}
-
               <div className="h-full w-full">
                 <FinalCard herName={herName} onReplay={handleReplay} />
               </div>
@@ -177,7 +157,7 @@ export function ReelFeed({ items, herName }: ReelFeedProps) {
           {toast && (
             <div className="pointer-events-none absolute inset-x-0 top-16 flex justify-center z-30">
               <div className="inline-flex items-center gap-1.5 rounded-full bg-black/75 px-3 py-1.5 text-xs font-semibold text-slate-100 border border-white/15 shadow-roast-lg animate-roast-pop">
-                <span className="text-lg">😂</span>
+                <span className="text-lg">😛😛</span>
                 <span>{toast.message}</span>
               </div>
             </div>

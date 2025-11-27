@@ -6,7 +6,6 @@ import { ReelControls } from './ReelControls'
 interface ReelItemProps {
   item: MediaItem
   isActive: boolean
-  roastMode: boolean
   index: number
   onRequestTogglePlay: () => void
   onDoubleRoast: () => void
@@ -17,7 +16,6 @@ interface ReelItemProps {
 export function ReelItem({
   item,
   isActive,
-  roastMode,
   index,
   onRequestTogglePlay,
   onDoubleRoast,
@@ -134,7 +132,7 @@ export function ReelItem({
           </div>
         )}
 
-        <RoastOverlay item={item} roastMode={roastMode} />
+        <RoastOverlay item={item} />
 
         {showTapLike && (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
