@@ -166,11 +166,7 @@ export function ReelItem({
 
 <ReelControls
         item={item}
-        isActive={isActive}
-        isPlaying={isPlaying}
-        progress={progress}
         liked={liked}
-        onTogglePlay={handleTap}
         onLike={onLike}
         onSave={() => {
           const link = document.createElement('a')

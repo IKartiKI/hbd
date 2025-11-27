@@ -5,22 +5,14 @@ import { CommentsSection } from './CommentsSection';
 
 interface ReelControlsProps {
   item: MediaItem
-  isActive: boolean
-  isPlaying: boolean
-  progress: number
   liked: boolean
-  onTogglePlay: () => void
   onLike: () => void
   onSave: () => void
 }
 
 export function ReelControls({
   item,
-  isActive,
-  isPlaying,
-  progress,
   liked,
-  onTogglePlay,
   onLike,
   onSave,
 }: ReelControlsProps) {
