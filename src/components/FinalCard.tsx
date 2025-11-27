@@ -9,7 +9,6 @@ interface FinalCardProps {
 export function FinalCard({ herName, onReplay }: FinalCardProps) {
   const [showMessage, setShowMessage] = useState(false)
   const [isMusicPlaying, setIsMusicPlaying] = useState(false)
-  const [showConfetti, setShowConfetti] = useState(true)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const loveLine = `Thank you for having a birthday, otherwise I'd never have wasted hours making this side project because of you.`
   const loveLine2 = `Pdhai krle chl kl paper h🥱.`
@@ -21,11 +20,13 @@ export function FinalCard({ herName, onReplay }: FinalCardProps) {
   const toggleMusic = () => {
     if (audioRef.current) {
       // Pause any other audio that might be playing
-      document.querySelectorAll('audio, video').forEach(media => {
+      const mediaElements = document.querySelectorAll('audio, video')
+      for (const media of Array.from(mediaElements)) {
         if (media !== audioRef.current) {
-          media.pause()
+          const htmlMedia = media as HTMLMediaElement
+          htmlMedia.pause()
         }
-      })
+      }
       
       if (isMusicPlaying) {
         audioRef.current.pause()
@@ -42,11 +43,12 @@ export function FinalCard({ herName, onReplay }: FinalCardProps) {
     audioRef.current.loop = true
     
     // Pause any other audio that might be playing
-    document.querySelectorAll('audio, video').forEach(media => {
+    const mediaElements = document.querySelectorAll<HTMLMediaElement>('audio, video')
+    for (const media of Array.from(mediaElements)) {
       if (media !== audioRef.current) {
         media.pause()
       }
-    })
+    }
 
     // Auto-play with user interaction
     const handleFirstInteraction = () => {
@@ -59,6 +61,9 @@ export function FinalCard({ herName, onReplay }: FinalCardProps) {
       }
     }
     
+    // Add event listener for first interaction
+    window.addEventListener('click', handleFirstInteraction, { once: true })
+    
     // Clean up audio on unmount
     return () => {
       if (audioRef.current) {
@@ -70,24 +75,6 @@ export function FinalCard({ herName, onReplay }: FinalCardProps) {
 
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-roastDark via-black to-roastDark text-center px-5 overflow-hidden">
-      {/* Confetti Animation */}
-      {showConfetti && (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {Array.from({ length: 50 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute top-0 h-2 w-2 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                backgroundColor: `hsl(${Math.random() * 360}, 100%, 50%)`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                animation: `confetti-fall ${Math.random() * 5 + 5}s linear ${Math.random() * 5}s infinite`,
-                opacity: 0.8,
-              }}
-            />
-          ))}
-        </div>
-      )}
 
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(244,63,94,0.35),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.24),_transparent_55%)]" />

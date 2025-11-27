@@ -8,7 +8,6 @@ interface UseAudioControllerOptions {
 }
 
 const FADE_DURATION = 300
-const AUDIO_CROSSFADE = 150 // ms for crossfade between tracks
 
 export function useAudioController({ items, activeIndex, isPlaying }: UseAudioControllerOptions) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
