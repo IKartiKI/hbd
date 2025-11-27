@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
+import manifest from '../../public/assets/manifest.json?url';
+import type { MediaItem } from '../types';
 
 interface Comment {
   id: string;
+  username: string;
   text: string;
   timestamp: number;
+  isFiller?: boolean;
 }
 
 interface CommentsSectionProps {
@@ -15,12 +19,43 @@ export function CommentsSection({ reelId, onClose }: CommentsSectionProps) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState('');
 
-  // Load comments from localStorage on component mount
+  // Load comments from localStorage and combine with filler comments
   useEffect(() => {
-    const savedComments = localStorage.getItem(`comments_${reelId}`);
-    if (savedComments) {
-      setComments(JSON.parse(savedComments));
-    }
+    const loadComments = async () => {
+      const savedComments = localStorage.getItem(`comments_${reelId}`);
+      const currentComments = savedComments ? JSON.parse(savedComments) : [];
+      
+      try {
+        // Fetch manifest data
+        const response = await fetch(manifest);
+        const manifestData = await response.json();
+        
+        // Get filler comments from manifest for this reel
+        const reelData = manifestData.find((item: any) => item.id === reelId);
+        const fillerComments = reelData?.fillerComments?.map((fc: any) => ({
+          id: `filler_${fc.timestamp}`,
+          username: fc.username,
+          text: fc.text,
+          timestamp: fc.timestamp,
+          isFiller: true
+        })) || [];
+        
+        // Combine filler comments with saved comments, removing duplicates
+        const allComments = [
+          ...currentComments,
+          ...fillerComments.filter(
+            (fc: Comment) => !currentComments.some((c: Comment) => c.text === fc.text)
+          )
+        ].sort((a: Comment, b: Comment) => b.timestamp - a.timestamp);
+        
+        setComments(allComments);
+      } catch (error) {
+        console.error('Error loading comments:', error);
+        setComments(currentComments);
+      }
+    };
+
+    loadComments();
   }, [reelId]);
 
   // Save comments to localStorage whenever they change
@@ -35,9 +70,11 @@ export function CommentsSection({ reelId, onClose }: CommentsSectionProps) {
     if (newComment.trim() === '') return;
     
     const comment: Comment = {
-      id: Date.now().toString(),
+      id: `user_${Date.now()}`,
+      username: 'You',
       text: newComment,
       timestamp: Date.now(),
+      isFiller: false
     };
 
     setComments(prev => [comment, ...prev]);
@@ -69,14 +106,26 @@ export function CommentsSection({ reelId, onClose }: CommentsSectionProps) {
           </div>
         ) : (
           comments.map(comment => (
-            <div key={comment.id} className="bg-white/5 p-2 rounded-lg">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs">
-                  👤
+            <div 
+              key={comment.id} 
+              className={`p-3 rounded-lg ${comment.isFiller ? 'bg-white/5' : 'bg-white/10'} border ${comment.isFiller ? 'border-white/5' : 'border-white/10'}`}
+            >
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex-shrink-0 flex items-center justify-center text-xs font-bold">
+                  {comment.username ? comment.username.charAt(0).toUpperCase() : 'U'}
                 </div>
-                <div>
-                  <div className="text-xs text-white/70">You • {formatTime(comment.timestamp)}</div>
-                  <p className="text-sm">{comment.text}</p>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium">{comment.username || 'User'}</span>
+                    <span className="text-xs text-white/50">•</span>
+                    <span className="text-xs text-white/50">{formatTime(comment.timestamp)}</span>
+                    {comment.isFiller && (
+                      <span className="text-[10px] bg-white/10 text-white/60 px-1.5 py-0.5 rounded-full ml-auto">
+                        Filler
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm mt-1 break-words">{comment.text}</p>
                 </div>
               </div>
             </div>

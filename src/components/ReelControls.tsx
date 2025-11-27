@@ -18,9 +18,11 @@ export function ReelControls({
 }: ReelControlsProps) {
   const [showCalculator, setShowCalculator] = useState(false);
   const [showComments, setShowComments] = useState(false);
+  const [activeReelId, setActiveReelId] = useState<string | null>(null);
 
   const handleCommentClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+    setActiveReelId(item.id);
     setShowComments(prev => !prev);
     setShowCalculator(false);
   };
@@ -99,22 +101,26 @@ export function ReelControls({
         </button>
 
         <div className="relative">
-          <button
-            type="button"
-            aria-label="Comment"
-            className="flex flex-col items-center group"
-            onClick={handleCommentClick}
-          >
-            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white/20 transition-colors">
-              <span className="text-2xl">💬</span>
-            </div>
-            <span className="text-xs mt-1 font-medium">1.2K</span>
-          </button>
-          {showComments && (
-            <div className="absolute bottom-0 right-0 z-50" onClick={e => e.stopPropagation()}>
-              <CommentsSection reelId={item.id} onClose={() => setShowComments(false)} />
-            </div>
-          )}
+          <div className="relative">
+            <button
+              type="button"
+              aria-label="Comment"
+              className="flex flex-col items-center group"
+              onClick={handleCommentClick}
+            >
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center ${showComments && activeReelId === item.id ? 'bg-white/20' : 'bg-white/10'} backdrop-blur-sm group-hover:bg-white/20 transition-colors`}>
+                <span className="text-2xl">💬</span>
+              </div>
+              <span className="text-xs mt-1 font-medium">1.2K</span>
+            </button>
+            {showComments && activeReelId === item.id && (
+              <div className="fixed top-0 left-0 w-full h-full z-50 flex justify-end" onClick={() => setShowComments(false)}>
+                <div className="h-full w-full max-w-xs bg-black/90 backdrop-blur-sm border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-in-out" onClick={e => e.stopPropagation()}>
+                  <CommentsSection reelId={item.id} onClose={() => setShowComments(false)} />
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         <button
