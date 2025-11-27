@@ -17,57 +17,64 @@ export function FinalCard({ herName, onReplay }: FinalCardProps) {
   const typed2 = useTypedText({ text: loveLine2, startDelayMs: 2600 })
 
   // Toggle music playback
-  const toggleMusic = () => {
-    if (audioRef.current) {
+  const toggleMusic = async () => {
+    if (!audioRef.current) return;
+    
+    try {
       // Pause any other audio that might be playing
-      const mediaElements = document.querySelectorAll('audio, video')
+      const mediaElements = document.querySelectorAll<HTMLMediaElement>('audio, video')
       for (const media of Array.from(mediaElements)) {
         if (media !== audioRef.current) {
-          const htmlMedia = media as HTMLMediaElement
-          htmlMedia.pause()
+          media.pause()
         }
       }
       
       if (isMusicPlaying) {
-        audioRef.current.pause()
+        await audioRef.current.pause()
       } else {
-        audioRef.current.play()
+        // If audio src is empty, set it again (in case of previous errors)
+        if (!audioRef.current.src) {
+          audioRef.current.src = '/assets/media/birthday-music.mp3'
+        }
+        await audioRef.current.play()
       }
       setIsMusicPlaying(!isMusicPlaying)
+    } catch (error) {
+      console.error('Error toggling music:', error)
+      // Try reloading the audio source if there's an error
+      if (audioRef.current) {
+        audioRef.current.load()
+      }
     }
   }
 
   // Initialize audio when component mounts
   useEffect(() => {
-    audioRef.current = new Audio('/assets/media/birthday-music.mp3')
+    // Create audio element with preload set to 'none' to prevent auto-downloading
+    audioRef.current = new Audio()
+    audioRef.current.preload = 'none'
     audioRef.current.loop = true
+    audioRef.current.src = '/assets/media/birthday-music.mp3'
     
-    // Pause any other audio that might be playing
-    const mediaElements = document.querySelectorAll<HTMLMediaElement>('audio, video')
-    for (const media of Array.from(mediaElements)) {
-      if (media !== audioRef.current) {
-        media.pause()
-      }
-    }
-
-    // Auto-play with user interaction
-    const handleFirstInteraction = () => {
-      if (audioRef.current) {
-        audioRef.current.play().then(() => {
-          setIsMusicPlaying(true)
-        }).catch(() => {
-          // Autoplay was prevented, user will need to click play
-        })
-      }
+    // Handle when audio can play
+    const handleCanPlay = () => {
+      console.log('Audio can play')
     }
     
-    // Add event listener for first interaction
-    window.addEventListener('click', handleFirstInteraction, { once: true })
+    // Handle audio errors
+    const handleError = (e: Event) => {
+      console.error('Audio error:', e)
+    }
+    
+    audioRef.current.addEventListener('canplay', handleCanPlay)
+    audioRef.current.addEventListener('error', handleError)
     
     // Clean up audio on unmount
     return () => {
       if (audioRef.current) {
         audioRef.current.pause()
+        audioRef.current.removeEventListener('canplay', handleCanPlay)
+        audioRef.current.removeEventListener('error', handleError)
         audioRef.current = null
       }
     }
